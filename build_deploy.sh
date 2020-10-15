@@ -15,5 +15,6 @@ helm package flask_app
 helm install flask-app-hello flask-app-0.0.1.tgz
 
 # wait for flask-app-hello pods
+# add new record for /etc/hosts: <NODE IP> flask-app.io
 # verify application
 # curl -v flask-app.io
