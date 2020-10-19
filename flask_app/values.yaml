@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: "registry.gitlab.com/realsystem/flask_app"
-  pullPolicy: "IfNotPresent"
+  pullPolicy: "Always"
   # Overrides the image tag whose default is the chart appVersion.
   tag: "0.1.0"
 
@@ -38,7 +38,7 @@ securityContext: {}
 
 service:
   type: "ClusterIP"
-  port: 5000
+  port: 80
 
 ingress:
   enabled: true

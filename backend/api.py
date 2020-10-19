@@ -10,6 +10,11 @@ bp = Blueprint('storage', __name__, url_prefix='/')
 my_site = aws.MyTerra('us-east-2')
 
 
+@bp.route('/health', methods=['GET'])
+def health():
+    return jsonify({})
+
+
 @bp.route('/', methods=['GET', 'POST', 'PUT'])
 def index():
     if request.method == 'POST':
