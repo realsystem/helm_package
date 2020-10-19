@@ -6,8 +6,6 @@ from backend import create_backend
 @pytest.fixture
 def app():
     app = create_backend()
-    with app.app_context():
-        pass
     yield app
 
 

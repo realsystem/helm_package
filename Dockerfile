@@ -4,6 +4,7 @@ RUN apt-get update && \
 COPY requirements.txt /app/requirements.txt
 WORKDIR /app
 RUN pip install -r requirements.txt
-COPY backend/storage.py /app/app.py
+COPY backend /app/
+COPY main.py /app/main.py
 ENTRYPOINT ["python"]
-CMD ["app.py"]
+CMD ["main.py"]
